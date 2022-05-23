@@ -1,0 +1,17 @@
+{
+  "name": "ajd-media-apis",
+  "version": "1.0.0",
+  "description": "AJD Media APIs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "@testdeck/mocha": "^0.2.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}

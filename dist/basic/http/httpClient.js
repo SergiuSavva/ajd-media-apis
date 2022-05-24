@@ -33,13 +33,13 @@ class HttpClient {
     constructor(baseURL) {
         this.instance = null;
         this.baseURL = baseURL;
+        this.http;
     }
     get http() {
         return this.instance != null ? this.instance : this.initHttp();
     }
     initHttp() {
         const http = axios_1.default.create({
-            // baseURL: "https://api.example.com",
             baseURL: this.baseURL,
             headers,
             withCredentials: true

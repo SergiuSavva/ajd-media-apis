@@ -36,6 +36,7 @@ class HttpClient {
 
   constructor(baseURL: string) {
     this.baseURL = baseURL;
+    this.http;
   }
 
   private get http(): AxiosInstance {
@@ -44,7 +45,6 @@ class HttpClient {
 
   initHttp() {
     const http = axios.create({
-      // baseURL: "https://api.example.com",
       baseURL: this.baseURL,
       headers,
       withCredentials: true

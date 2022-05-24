@@ -1,2 +1,4 @@
 import { Schema } from "../basic/schema";
-export { Schema };
+export declare class DmvSchema extends Schema {
+    constructor();
+}

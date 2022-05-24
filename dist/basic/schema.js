@@ -1,30 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Schema = exports.Field = void 0;
-class Field {
-    constructor(name, type) {
-        this.name = name;
-        this.type = type;
-    }
-}
-exports.Field = Field;
+exports.Schema = void 0;
+const ajv_1 = require("ajv");
 class Schema {
-    constructor(name, fields) {
-        this.name = name;
-        this.fields = fields;
+    constructor(schema) {
+        this._ajv = new ajv_1.default();
+        this._schema = schema;
     }
     validate(data) {
-        for (let field of this.fields) {
-            if (!data.hasOwnProperty(field.name)) {
-                return false;
-            }
-            // check if data is of type field.type
-            // if not, return false
-            if (typeof data[field.name] !== field.type) {
-                return false;
-            }
-        }
-        return true;
+        return this._ajv.validate(this._schema, data);
     }
 }
 exports.Schema = Schema;

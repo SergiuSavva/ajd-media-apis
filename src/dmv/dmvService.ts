@@ -7,8 +7,11 @@ export class DmvService {
     this.httpClient = new DmvHttpClient();
   }
 
-  public async getDmv(slug: string): Promise<any> {
-    const uri = `/api/v1/dmv/${slug}`;
-    return this.httpClient.get(uri);
+  public getDmv(slug: string) {
+    return this.httpClient.getDmv(slug);
+  }
+
+  public getDmvList() {
+    return this.httpClient.getDmvList();
   }
 }

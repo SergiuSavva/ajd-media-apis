@@ -26,4 +26,3 @@ exports.APis = {
     dmv: new dmvService_1.DmvService(),
     nubes: new nubesService_1.NubesService(),
 };
-exports.APis.dmv.getDmv('test').then(console.log);

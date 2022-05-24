@@ -1,7 +1,6 @@
 // @ts-ignore
 import { DmvService } from "./dmv/dmvService";
 import { NubesService } from "./nubes/nubesService";
-
 export { HttpClient } from "./basic/http/httpClient";
 
 // Controller with validations
@@ -25,9 +24,5 @@ export class MainService {
 
 export const APis = {
   dmv: new DmvService(),
-  nubes: new NubesService(),
-
+  nubes: new NubesService()
 };
-
-
-APis.dmv.getDmv('test').then(console.log);

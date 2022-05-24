@@ -17,8 +17,12 @@ class DmvService {
     }
     getDmv(slug) {
         return __awaiter(this, void 0, void 0, function* () {
-            const uri = `/api/v1/dmv/${slug}`;
-            return this.httpClient.get(uri);
+            return yield this.httpClient.getDmv(slug);
+        });
+    }
+    getDmvList() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield this.httpClient.getDmvList();
         });
     }
 }

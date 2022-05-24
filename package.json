@@ -1,5 +1,5 @@
 {
-  "name": "ajd-media-apis",
+  "name": "@SergiuSavva/ajd-media-apis",
   "version": "1.0.1",
   "description": "AJD Media APIs",
   "main": "dist/index.js",
